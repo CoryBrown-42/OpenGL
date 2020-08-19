@@ -100,30 +100,67 @@ int main()
 		std::cout << "Error - Fragment Shader Compilation Failed\n" << infoLog << std::endl;
 	}
 
+	GLuint shaderProgram = glCreateProgram();
+	glAttachShader(shaderProgram, vertexShader);
+	glAttachShader(shaderProgram, fragmentShader);
+	glLinkProgram(shaderProgram);
+
 	glDeleteShader(vertexShader);
 	glDeleteShader(fragmentShader);
 
 	GLfloat vertices[] =
 	{
-		-0.5f, -0.5f, 0.0f  //left bottom
-	}
+		-0.5f, -0.5f, 0.0f,
+		0.5, -0.5f, 0.0f,
+		0.0f, 0.5f, 0.0f 
+	};
 
+	GLuint VBO, VAO;
+	glGenVertexArrays(1, &VAO);
+	glGenBuffers(1, &VBO);
+
+	glBindVertexArray(VAO);
+	glBindBuffer(GL_ARRAY_BUFFER, VBO);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+
+	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat), (GLvoid*)0);
+	glEnableVertexAttribArray(0);
+
+	glBindBuffer(GL_ARRAY_BUFFER, 0);
+
+	glBindVertexArray(0);
+
+
+	float frameCount = 0.0f;
 
 	//Game loop
 	while (!glfwWindowShouldClose(window))
 	{
+		frameCount++;
+		std::cout << "Frame: " << frameCount << std::endl;
+		system("CLS");
 		glfwPollEvents();
 
 		//0 - 1
 		//RGBA color of the clear to background
-		glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
+		glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
 
 		//draw
+		glUseProgram(shaderProgram);
+		glBindVertexArray(VAO);
+		glDrawArrays(GL_TRIANGLES, 0, 3);
+		glBindVertexArray(0);
+
 
 		glfwSwapBuffers(window);
 	}
 
+	//Wipe buffers
+	glDeleteVertexArrays(1, &VAO);
+	glDeleteBuffers(1, &VBO);
+
+	//terminate the program
 	glfwTerminate();
 
 	return EXIT_SUCCESS;
