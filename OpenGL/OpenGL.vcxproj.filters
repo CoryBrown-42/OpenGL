@@ -13,23 +13,109 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Resource Files\Resources">
+      <UniqueIdentifier>{0d6cb82e-701c-458c-b305-d86ebcc589e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Resources\Images">
+      <UniqueIdentifier>{4b053d57-465a-41f9-8cd2-83a1286c8da7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Resources\Shaders">
+      <UniqueIdentifier>{ece9ae24-2587-4d58-b85d-372d4e5a81c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\SOIL2">
+      <UniqueIdentifier>{55643235-d4c9-44f9-bc27-235756540f28}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SOIL2\etc1_utils.c">
+      <Filter>Resource Files\SOIL2</Filter>
+    </ClCompile>
+    <ClCompile Include="SOIL2\image_DXT.c">
+      <Filter>Resource Files\SOIL2</Filter>
+    </ClCompile>
+    <ClCompile Include="SOIL2\image_helper.c">
+      <Filter>Resource Files\SOIL2</Filter>
+    </ClCompile>
+    <ClCompile Include="SOIL2\SOIL2.c">
+      <Filter>Resource Files\SOIL2</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="core.frag">
-      <Filter>Source Files</Filter>
+    <None Include="Resources\Shaders\core.frag">
+      <Filter>Resource Files\Resources\Shaders</Filter>
     </None>
-    <None Include="core.vs">
-      <Filter>Source Files</Filter>
+    <None Include="Resources\Shaders\core.vs">
+      <Filter>Resource Files\Resources\Shaders</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Shader.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="SOIL2\etc1_utils.h">
+      <Filter>Resource Files\SOIL2</Filter>
+    </ClInclude>
+    <ClInclude Include="SOIL2\image_DXT.h">
+      <Filter>Resource Files\SOIL2</Filter>
+    </ClInclude>
+    <ClInclude Include="SOIL2\image_helper.h">
+      <Filter>Resource Files\SOIL2</Filter>
+    </ClInclude>
+    <ClInclude Include="SOIL2\jo_jpeg.h">
+      <Filter>Resource Files\SOIL2</Filter>
+    </ClInclude>
+    <ClInclude Include="SOIL2\pkm_helper.h">
+      <Filter>Resource Files\SOIL2</Filter>
+    </ClInclude>
+    <ClInclude Include="SOIL2\pvr_helper.h">
+      <Filter>Resource Files\SOIL2</Filter>
+    </ClInclude>
+    <ClInclude Include="SOIL2\SOIL2.h">
+      <Filter>Resource Files\SOIL2</Filter>
+    </ClInclude>
+    <ClInclude Include="SOIL2\stb_image.h">
+      <Filter>Resource Files\SOIL2</Filter>
+    </ClInclude>
+    <ClInclude Include="SOIL2\stb_image_write.h">
+      <Filter>Resource Files\SOIL2</Filter>
+    </ClInclude>
+    <ClInclude Include="SOIL2\stbi_DDS.h">
+      <Filter>Resource Files\SOIL2</Filter>
+    </ClInclude>
+    <ClInclude Include="SOIL2\stbi_DDS_c.h">
+      <Filter>Resource Files\SOIL2</Filter>
+    </ClInclude>
+    <ClInclude Include="SOIL2\stbi_ext.h">
+      <Filter>Resource Files\SOIL2</Filter>
+    </ClInclude>
+    <ClInclude Include="SOIL2\stbi_ext_c.h">
+      <Filter>Resource Files\SOIL2</Filter>
+    </ClInclude>
+    <ClInclude Include="SOIL2\stbi_pkm.h">
+      <Filter>Resource Files\SOIL2</Filter>
+    </ClInclude>
+    <ClInclude Include="SOIL2\stbi_pkm_c.h">
+      <Filter>Resource Files\SOIL2</Filter>
+    </ClInclude>
+    <ClInclude Include="SOIL2\stbi_pvr.h">
+      <Filter>Resource Files\SOIL2</Filter>
+    </ClInclude>
+    <ClInclude Include="SOIL2\stbi_pvr_c.h">
+      <Filter>Resource Files\SOIL2</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="C:\Users\Cory\Pictures\vertex-fragment.PNG">
+      <Filter>Resource Files\Resources\Images</Filter>
+    </Image>
+    <Image Include="C:\Users\Cory\Pictures\hotkey.PNG">
+      <Filter>Resource Files\Resources\Images</Filter>
+    </Image>
+    <Image Include="C:\Users\Cory\Pictures\Image1.jpg">
+      <Filter>Resource Files\Resources\Images</Filter>
+    </Image>
   </ItemGroup>
 </Project>
